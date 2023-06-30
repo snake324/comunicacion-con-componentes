@@ -1,0 +1,15 @@
+<app-form [people]="people" (personAdded)="addPerson($event)"></app-form>
+
+<div *ngIf="people.length > 0">
+  <h2>People:</h2>
+  <ul class="person-list">
+    <li class="person-item" *ngFor="let person of people">
+      <span class="person-id">ID: {{ person.id }}</span>
+      <span class="person-name">Name: {{ person.name }}</span>
+      <span class="person-lastname">Lastname: {{ person.lastName }}</span>
+      <span class="person-position">Position: {{ person.position }}</span>
+      <span class="person-salary">Salary: {{ person.salary }}</span>
+    </li>
+  </ul>
+</div>
+
