@@ -1,1 +1,14 @@
-<p>characteristics works!</p>
+<div class="characteristics-container">
+  <h3>Characteristics:</h3>
+  <ul>
+    <li *ngFor="let characteristic of person.characteristics">
+      {{ characteristic }}
+    </li>
+    <li *ngFor="let characteristic of newCharacteristics">
+      {{ characteristic }}
+    </li>
+  </ul>
+  <button (click)="addCharacteristic()">Add Characteristic</button>
+</div>
+
+

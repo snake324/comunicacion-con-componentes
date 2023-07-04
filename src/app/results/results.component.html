@@ -9,6 +9,7 @@
       <span class="person-lastname">Lastname: {{ person.lastName }}</span>
       <span class="person-position">Position: {{ person.position }}</span>
       <span class="person-salary">Salary: {{ person.salary }}</span>
+      <app-characteristics [person]="person" (characteristicsAdded)="addCharacteristics($event, person)"></app-characteristics>
     </li>
   </ul>
 </div>

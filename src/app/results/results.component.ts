@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-results',
@@ -6,9 +6,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent {
-  @Input() people: any[] = [];
+  people: any[] = [];
 
   addPerson(person: any) {
     this.people.push(person);
+  }
+
+  addCharacteristics(characteristics: string[], person: any) {
+    person.characteristics = person.characteristics.concat(characteristics);
   }
 }
